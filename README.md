@@ -91,7 +91,7 @@ Deploy a node with Chainstack:
 Clone this repository
 
 ```sh
-git clone https://github.com/yieniggu/chainstack-full-vs-archive-query-js.git
+git clone https://github.com/soos3d/node-proxy-server-to-protect-your-rpc-url-endpoint.git
 ```
 
 Install dependencies
