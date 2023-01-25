@@ -85,6 +85,7 @@ Deploy a node with Chainstack:
 * express: ^4.18.2
 * express-rate-limit: ^6.7.0
 * web3: ^1.8.1
+* nodemon: ^2.0.20
 
 ## Install
 
