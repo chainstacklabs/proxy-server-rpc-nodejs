@@ -21,27 +21,83 @@
   <a target="_blank" href="https://console.chainstack.com/user/account/create">Start for free</a> •
 </p>
 
-# Node RPC proxy server
+# Proxy server for RPC endpoint using Express
 
 This project shows how to protect your RPC URL by creating a back-end server where you store the endpoint. Then, when you click the button to check the balance, the front end will send a request to the back-end server using the `eth_getBalance` method via the `web3.js` library. 
 
+Read the full guide on the Chainstack developer portal
+* []()
+
+## Project details
+
+For this use case, we built a simple app that allows you to input an Ethereum address and returns the address balance by sending an `eth_getBalance` request to an Ethereum node.
+
+It is built using the `Express.js` framework, and the main server code is in the `index.js` file that you can find in the root directory.
+
 ## Quickstart
 
-1. Clone the repo.
-1. Edit the `.env.sample` file to include your node RPC URL key and rename it to `.env`.
-1. Install  dependencies:
+Clone the repository:
+
+```sh
+git clone https://github.com/soos3d/node-proxy-server-to-protect-your-rpc-url-endpoint.git
+```
+
+Edit the `.env.sample` file to include your node RPC URL key and rename it to `.env`.
+
+```env
+ETHEREUM_RPC_URL="YOUR_CHAINSTACK_ENDPOINT_URL"
+```
+
+Install  dependencies:
 
 ```sh
 npm install
 ```
-4. Run page in dev mode with:
+
+Run page in dev mode with:
 
 ```sh
 npm run dev
 ```
-The page is now running in `http://localhost:5000/`. Open it in your browser to see it. 
+
+The page is now running in `http://localhost:5000/`. Open it in your browser to see it, then:
 
 1. Insert the address you want to query in the input field.
 1. Click **Check balance** to send a request to your RPC node and retrieve the address' balance.
 
 If you check the source code from the browser, you won't be able to find the API key used! 
+
+## Prerequisites
+
+* Node.js: ^16.17.0— [install Node](https://nodejs.org/en/download/)
+* A node RPC endpoint.
+
+Deploy a node with Chainstack:
+
+1. [Sign up with Chainstack](https://console.chainstack.com/user/account/create).  
+1. [Deploy a node](https://docs.chainstack.com/platform/join-a-public-network).  
+1. [View node access and credentials](https://docs.chainstack.com/platform/view-node-access-and-credentials). 
+
+## Dependencies
+
+* cors: ^2.8.5
+* dotenv: ^16.0.3
+* express: ^4.18.2
+* express-rate-limit: ^6.7.0
+* web3: ^1.8.1
+
+## Install
+
+Clone this repository
+
+```sh
+git clone https://github.com/yieniggu/chainstack-full-vs-archive-query-js.git
+```
+
+Install dependencies
+
+```sh
+npm ci
+```
+
+> Use `npm ci` to launch a `clean install` of the dependencies, this will install the same version as in the `package.json` file.
