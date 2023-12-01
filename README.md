@@ -26,7 +26,7 @@
 This project shows how to protect your RPC URL by creating a back-end server where you store the endpoint. Then, when you click the button to check the balance, the front end will send a request to the back-end server using the `eth_getBalance` method via the `web3.js` library. 
 
 Read the full guide on the Chainstack developer portal
-* []()
+* [How to store your Web3 DApp secrets: Guide to environment variables](https://docs.chainstack.com/docs/how-to-store-your-web3-dapp-secrets-guide-to-environment-variables#the-rest-api-proxy-server)
 
 ## Project details
 
